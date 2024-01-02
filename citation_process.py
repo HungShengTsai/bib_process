@@ -98,7 +98,10 @@ def citation_process(citation_block: list, journal_to_abbr: dict, exclude_word: 
         
         # Check required entry
         string_start = next((word for word in unsatisfied if line_strip.lower().startswith(word)), None)
-        if string_start:
+        # next() retrieves the first element from this generator expression that 
+        # satisfies the condition specified. If no element satisfies the 
+        # condition, it returns None (the second argument).
+        if string_start: #string start = "string" (indicates True) or None (indicates False)
             unsatisfied.remove(string_start)
 
     if unsatisfied and (citation_block[0].strip(" ").startswith("@article")):

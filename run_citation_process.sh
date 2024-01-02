@@ -3,6 +3,7 @@
 cd $(dirname $0)
 
 echo -e "Possible citation files:"
+# Using find to locate files with .bib extension and echo their filenames with line breaks
 find $(dirname $0) -type f -name "*.bib" -exec basename {} \;
 
 read -r -p "enter filename: " ini

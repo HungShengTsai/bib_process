@@ -1,0 +1,5 @@
+author
+journal
+title
+pages
+year
